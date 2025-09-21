@@ -7,8 +7,13 @@ import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
+interface User {
+  id: string
+  email?: string
+}
+
 export default function Dashboard() {
-  const [user, setUser] = useState<{ email: string } | null>(null)
+  const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -50,12 +55,10 @@ export default function Dashboard() {
           <AuthButton />
         </header>
         
-        {/* Schedule Form */}
         <div className="mb-8">
           <ScheduleForm />
         </div>
 
-        {/* Upcoming Sessions Section */}
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-4">Your Upcoming Sessions</h2>
           <p className="text-gray-600">Your scheduled sessions will appear here soon!</p>
