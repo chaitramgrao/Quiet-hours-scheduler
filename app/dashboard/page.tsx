@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 export default function Dashboard() {
-  const [user, setUser] = useState<any>(null)
+  const [user, setUser] = useState<{ email: string } | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
