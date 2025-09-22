@@ -1,7 +1,7 @@
-// File: components/AuthButton.tsx
-import { User } from '@/types';
-'use client' // This is important for components that use interactivity
+// File: components/AuthButton.tsx  
+'use client'  
 
+import { User } from '@/types';
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'

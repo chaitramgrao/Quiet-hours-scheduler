@@ -1,12 +1,12 @@
-import { User } from '@/types';
-'use client'
+// File: app/dashboard/page.tsx
+'use client'  // 
 
+import { User } from '@/types';
 import AuthButton from '@/components/AuthButton'
 import ScheduleForm from '@/components/ScheduleForm'
 import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-
 
 
 export default function Dashboard() {
