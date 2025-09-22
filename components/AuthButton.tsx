@@ -1,4 +1,5 @@
 // File: components/AuthButton.tsx
+import { User } from '@/types';
 'use client' // This is important for components that use interactivity
 
 import { supabase } from '@/lib/supabase'
@@ -6,7 +7,8 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export default function AuthButton() {
- const [user, setUser] = useState<{ email: string } | null>(null)
+const [user, setUser] = useState<User | null>(null)
+
   const router = useRouter()
 
   useEffect(() => {

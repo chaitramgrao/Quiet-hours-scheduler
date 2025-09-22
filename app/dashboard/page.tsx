@@ -1,4 +1,4 @@
-// File: app/dashboard/page.tsx
+import { User } from '@/types';
 'use client'
 
 import AuthButton from '@/components/AuthButton'
@@ -7,10 +7,7 @@ import { supabase } from '@/lib/supabase'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-interface User {
-  id: string
-  email?: string
-}
+
 
 export default function Dashboard() {
   const [user, setUser] = useState<User | null>(null)
